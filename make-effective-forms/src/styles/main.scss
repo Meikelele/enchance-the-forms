@@ -1,0 +1,17 @@
+$background-image: url(/make-effective-forms/public/paper-background.jpg);
+$font-family: "Farro", sans-serif;
+$base-padding: 2rem;
+
+body {
+  font-family: $font-family;
+  font-weight: 300;
+  font-style: normal;
+
+  background: url("../public/paper-background.jpg") repeat;
+  background-size: cover;
+
+  padding: $base-padding;
+  min-height: 100vh;
+  margin: 0;
+  color: #212529;
+}
