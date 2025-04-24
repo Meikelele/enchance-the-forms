@@ -23,11 +23,11 @@ const FormContainer = () => {
 
     return (
         <form onSubmit={handleSubmit}>
-            <InputWithLabel id="firstName" label="First name" type="text" required placeholder="ex. Michael" value={userData.firstName} onChange={handleChange}  />
-            <InputWithLabel id="lastName" label="Last name" type="text" required placeholder="ex. Plain" value={userData.lastName} onChange={handleChange} />
-            <InputWithLabel id="email" label="Email" type="email" required placeholder="ex. michael.plain@gmail.com" value={userData.email} onChange={handleChange} />
+            <InputWithLabel id="firstName" label="First name" type="text" required={false} placeholder="ex. Michael" value={userData.firstName} onChange={handleChange}  />
+            <InputWithLabel id="lastName" label="Last name" type="text" required={false} placeholder="ex. Plain" value={userData.lastName} onChange={handleChange} />
+            <InputWithLabel id="email" label="Email" type="email" required={false} placeholder="ex. michael.plain@gmail.com" value={userData.email} onChange={handleChange} />
 
-            <button type="button" className="btn btn-primary">Submit</button>
+            <button type='submit' className="btn btn-primary">Submit</button>
         </form>
     )
 }
