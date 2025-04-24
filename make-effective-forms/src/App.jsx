@@ -3,7 +3,7 @@ import React from 'react'
 function App() {
   return (
     <div className="container">
-      <h1>Efektywny formularz</h1>
+      <h1>Efektywny formularz-container</h1>
     </div>
   )
 }
