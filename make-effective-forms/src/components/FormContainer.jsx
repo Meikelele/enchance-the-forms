@@ -4,6 +4,8 @@ import InputWithLabel from './InputWithLabel'
 import PhoneInputWithCountryCode from './PhoneInputWithCountryCode'
 import ShippingMethodRadioGroup from './ShippingMethodRadioGroup'
 import PaymentMethodRadioGroup from './PaymentMethodRadioGroup'
+import CountryAutocompleteSelect from './CountryAutocompleteSelect'
+
 
 const FormContainer = () => {
 
@@ -17,7 +19,8 @@ const FormContainer = () => {
         },
         shippingMethod: '',
         paymentMethod: '',
-        blikCode: ''
+        blikCode: '',
+        country: ''
     })
 
     const handleChange = (e) => {
@@ -40,6 +43,10 @@ const FormContainer = () => {
     const handleBlikCodeChange = (codeBLIK) => {
         setUserData((prev) => ({ ...prev, blikCode: codeBLIK }))
     }
+
+    const handleCountryChange = (val) => {
+        setUserData((prev) => ({ ...prev, country: val }))
+    }
       
     
     const handleSubmit = (e) => {
@@ -56,6 +63,7 @@ const FormContainer = () => {
             <PhoneInputWithCountryCode value={userData.phone} onChange={handlePhoneChange} />
             <ShippingMethodRadioGroup value={userData.shippingMethod} onChange={handleShippingChange} />
             <PaymentMethodRadioGroup value={userData.paymentMethod} blikCode={userData.blikCode} onChange={handlePaymentChange} onBlikCodeChange={handleBlikCodeChange} />
+            <CountryAutocompleteSelect value={userData.country} onChange={handleCountryChange} />
 
             <button type='submit' className="btn btn-primary">Submit</button>
 
