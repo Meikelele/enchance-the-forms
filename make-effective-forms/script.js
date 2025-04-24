@@ -60,6 +60,5 @@ function getCountryCode(countryName) {
 (() => {
     // nasłuchiwania na zdarzenie kliknięcia myszką
     document.addEventListener('click', handleClick);
-
     fetchAndFillCountries();
 })()
