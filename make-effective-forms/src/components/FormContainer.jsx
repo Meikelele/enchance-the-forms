@@ -3,6 +3,7 @@ import { useState } from 'react'
 import InputWithLabel from './InputWithLabel'
 import PhoneInputWithCountryCode from './PhoneInputWithCountryCode'
 import ShippingMethodRadioGroup from './ShippingMethodRadioGroup'
+import PaymentMethodRadioGroup from './PaymentMethodRadioGroup'
 
 const FormContainer = () => {
 
@@ -31,6 +32,15 @@ const FormContainer = () => {
     const handleShippingChange = (value) => {
         setUserData( (prevState) => ({...prevState, shippingMethod: value}))
     }
+
+    const handlePaymentChange = (value) => {
+        setUserData((prev) => ({ ...prev, paymentMethod: value }))
+    }
+      
+    const handleBlikCodeChange = (codeBLIK) => {
+        setUserData((prev) => ({ ...prev, blikCode: codeBLIK }))
+    }
+      
     
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -45,6 +55,7 @@ const FormContainer = () => {
             <InputWithLabel id="email" label="Email" type="email" required={false} placeholder="ex. michael.plain@gmail.com" value={userData.email} onChange={handleChange} />
             <PhoneInputWithCountryCode value={userData.phone} onChange={handlePhoneChange} />
             <ShippingMethodRadioGroup value={userData.shippingMethod} onChange={handleShippingChange} />
+            <PaymentMethodRadioGroup value={userData.paymentMethod} blikCode={userData.blikCode} onChange={handlePaymentChange} onBlikCodeChange={handleBlikCodeChange} />
 
             <button type='submit' className="btn btn-primary">Submit</button>
 
