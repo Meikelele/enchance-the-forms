@@ -5,7 +5,7 @@ import PhoneInputWithCountryCode from './PhoneInputWithCountryCode'
 import ShippingMethodRadioGroup from './ShippingMethodRadioGroup'
 import PaymentMethodRadioGroup from './PaymentMethodRadioGroup'
 import CountryAutocompleteSelect from './CountryAutocompleteSelect'
-
+import InvoiceFields from './InvoiceFields'
 
 const FormContainer = () => {
 
@@ -20,7 +20,13 @@ const FormContainer = () => {
         shippingMethod: '',
         paymentMethod: '',
         blikCode: '',
-        country: ''
+        country: '',
+        wantsInvoice: false,
+        invoice: {
+            name: "",
+            nip: "",
+            address: ""
+        }
     })
 
     const handleChange = (e) => {
@@ -47,7 +53,16 @@ const FormContainer = () => {
     const handleCountryChange = (val) => {
         setUserData((prev) => ({ ...prev, country: val }))
     }
+    
+    const handleInvoiceToggle = (checked) => {
+        setUserData((prev) => ({...prev, wantsInvoice: checked,}))
+    }
       
+    const handleInvoiceDataChange = (invoice) => {
+        setUserData((prev) => ({...prev, invoice: invoice,}))
+    }
+      
+
     
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -64,6 +79,8 @@ const FormContainer = () => {
             <ShippingMethodRadioGroup value={userData.shippingMethod} onChange={handleShippingChange} />
             <PaymentMethodRadioGroup value={userData.paymentMethod} blikCode={userData.blikCode} onChange={handlePaymentChange} onBlikCodeChange={handleBlikCodeChange} />
             <CountryAutocompleteSelect value={userData.country} onChange={handleCountryChange} />
+            <InvoiceFields checked={userData.wantsInvoice} data={userData.invoice} onToggle={handleInvoiceToggle} onChange={handleInvoiceDataChange} />
+
 
             <button type='submit' className="btn btn-primary">Submit</button>
 
