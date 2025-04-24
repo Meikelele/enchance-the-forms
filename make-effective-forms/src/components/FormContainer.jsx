@@ -23,9 +23,8 @@ const FormContainer = () => {
         country: '',
         wantsInvoice: false,
         invoice: {
-            name: "",
-            nip: "",
-            address: ""
+            vat_number: "",
+            invoice_data: "",
         }
     })
 
