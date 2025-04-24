@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import InputWithLabel from './InputWithLabel'
 import PhoneInputWithCountryCode from './PhoneInputWithCountryCode'
 import ShippingMethodRadioGroup from './ShippingMethodRadioGroup'
@@ -8,6 +8,17 @@ import CountryAutocompleteSelect from './CountryAutocompleteSelect'
 import InvoiceFields from './InvoiceFields'
 
 const FormContainer = () => {
+
+    const [clickCount, setClickCount] = useState(0);
+
+    useEffect(() => {
+        const handleClick = () => {
+          setClickCount((prev) => prev + 1);
+        };
+      
+        document.addEventListener('click', handleClick);
+      }, []);
+      
 
     const [userData, setUserData] = useState({
         firstName: '',
@@ -27,7 +38,8 @@ const FormContainer = () => {
         invoice: {
             vat_number: "",
             invoice_data: "",
-        }
+        },
+        city: '',
     })
 
     const handleChange = (e) => {
@@ -74,6 +86,8 @@ const FormContainer = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log('User data from form:', userData)
+        console.log("Clicks:", clickCount)
+        setClickCount(0);
     }
 
 
@@ -81,7 +95,7 @@ const FormContainer = () => {
         <form onSubmit={handleSubmit}>
 
             <fieldset className='mb-2 border rounded'>
-                <legend className='h3'>User data</legend>
+                <legend className='h4'>User data</legend>
                 <div className='row'>
                     <div className='col-md-6'>
                         <InputWithLabel id="firstName" label="First name" type="text" required={false} placeholder="ex. Michael" value={userData.firstName} onChange={handleChange}  />
@@ -94,7 +108,7 @@ const FormContainer = () => {
             </fieldset>
 
             <fieldset className='mb-2 border rounded'>
-                <legend className='h3'>Shipping address</legend>
+                <legend className='h4'>Shipping address</legend>
                 <InputWithLabel id="street" label="Street" type="text" required={false} placeholder="ex. Warszawska 12" value={userData.street} onChange={handleStreetChange} />
             
                 <div className='row'>
@@ -111,26 +125,27 @@ const FormContainer = () => {
             </fieldset>
 
             <fieldset className='mb-2 border rounded'>
-                <legend className='h3'>Contact data</legend>
+                <legend className='h4'>Contact data</legend>
                 <PhoneInputWithCountryCode value={userData.phone} onChange={handlePhoneChange} />
             </fieldset>
 
             <fieldset className='mb-2 border rounded'>
-                <legend className='h3'>Shipping method</legend>
+                <legend className='h4'>Shipping method</legend>
                 <ShippingMethodRadioGroup value={userData.shippingMethod} onChange={handleShippingChange} />
             </fieldset>
 
             <fieldset className='mb-2 border rounded'>
-                <legend className='h3'>Payment method</legend>
+                <legend className='h4'>Payment method</legend>
                 <PaymentMethodRadioGroup value={userData.paymentMethod} blikCode={userData.blikCode} onChange={handlePaymentChange} onBlikCodeChange={handleBlikCodeChange} />
             </fieldset>
                 
             <fieldset className='mb-2 border rounded'>
-                <legend className='h3'>Invoice</legend>
+                <legend className='h4'>Invoice</legend>
                 <InvoiceFields checked={userData.wantsInvoice} data={userData.invoice} onToggle={handleInvoiceToggle} onChange={handleInvoiceDataChange} />
             </fieldset>
 
             <button type='submit' className="btn btn-primary">Submit</button>
+
         </form>
     )
 }
