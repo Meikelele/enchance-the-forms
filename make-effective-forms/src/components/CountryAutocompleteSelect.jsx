@@ -42,7 +42,7 @@ const CountryAutocompleteSelect = ({value, onChange }) => {
 
   return (
     <div className="mb-3 position-relative">
-      <label htmlFor="country" className="form-label">Country</label>
+      <label htmlFor="country" className="form-label" style={{marginBottom: '0rem'}}>Country</label>
       <input id="country" className="form-control" value={input} onChange={handleInput} placeholder="ex. Poland" autoComplete="off" />
       {filtered.length > 0 && input && (
         <ul className="list-group position-absolute w-100 shadow z-3" style={{ maxHeight: "200px", overflowY: "auto" }}>

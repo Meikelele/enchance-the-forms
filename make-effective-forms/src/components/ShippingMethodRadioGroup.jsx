@@ -2,7 +2,7 @@ import React from "react";
 
 const shippingOptions = [
   { label: "DPD", value: "DPD", icon: "bi-truck" },
-  { label: "InPost", value: "InPost", icon: "bi-box-seam" },
+  { label: "InPost", value: "InPost", icon: "bi-truck" },
   { label: "DHL", value: "DHL", icon: "bi-truck" },
   { label: "Fedex", value: "Fedex", icon: "bi-truck" },
   { label: "UPS", value: "UPS", icon: "bi-truck" },

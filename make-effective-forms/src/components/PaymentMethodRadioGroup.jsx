@@ -2,8 +2,8 @@ import React from "react";
 
 const paymentOptions = [
   { label: "BLIK", value: "blik", icon: "bi-phone" },
-  { label: "Karta", value: "card", icon: "bi-credit-card" },
-  { label: "Pośrednik", value: "gateway", icon: "bi-currency-exchange" },
+  { label: "Card", value: "card", icon: "bi-credit-card" },
+  { label: "Agent", value: "gateway", icon: "bi-currency-exchange" },
 ];
 
 const PaymentMethodRadioGroup = ({ value, blikCode, onChange, onBlikCodeChange }) => {
