@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import InputWithLabel from './InputWithLabel'
 import PhoneInputWithCountryCode from './PhoneInputWithCountryCode'
+import ShippingMethodRadioGroup from './ShippingMethodRadioGroup'
 
 const FormContainer = () => {
 
@@ -12,7 +13,10 @@ const FormContainer = () => {
         phone: {
             countryCode: '',
             number: ''
-        }
+        },
+        shippingMethod: '',
+        paymentMethod: '',
+        blikCode: ''
     })
 
     const handleChange = (e) => {
@@ -23,6 +27,10 @@ const FormContainer = () => {
     const handlePhoneChange = (phoneData) => (
         setUserData({...userData, phone: phoneData})
     )
+
+    const handleShippingChange = (value) => {
+        setUserData( (prevState) => ({...prevState, shippingMethod: value}))
+    }
     
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -36,7 +44,10 @@ const FormContainer = () => {
             <InputWithLabel id="lastName" label="Last name" type="text" required={false} placeholder="ex. Plain" value={userData.lastName} onChange={handleChange} />
             <InputWithLabel id="email" label="Email" type="email" required={false} placeholder="ex. michael.plain@gmail.com" value={userData.email} onChange={handleChange} />
             <PhoneInputWithCountryCode value={userData.phone} onChange={handlePhoneChange} />
+            <ShippingMethodRadioGroup value={userData.shippingMethod} onChange={handleShippingChange} />
+
             <button type='submit' className="btn btn-primary">Submit</button>
+
         </form>
     )
 }
