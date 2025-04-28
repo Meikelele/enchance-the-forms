@@ -1,27 +1,63 @@
-### Dodaj etykiety do formularza
+<h1 align="center">Efficient Form – Modernization Project</h1>
+<p align="center">
+  The goal of this project was to transform an outdated, unintuitive form into a modern and accessible version that reduces the time and clicks needed to complete it and improves the overall user experience.
+</p>
 
-Każde pole w formularzu powinno być opatrzone etykietą, która jasno wskazuje, do czego to pole służy. Nie używaj placeholdera jako etykiety! Znika on, gdy tylko użytkownik go wybierze i często może dezorientować użytkownika. Umieszczenie etykiety nad polem pomaga użytkownikom w szybkim skanowaniu i wypełnianiu formularzy. Zapewnia krótszy czas wypełnienia formularza. Dodając etykiety zwiększysz dostępność dla osób niepełnosprawnych. Jeśli pole wymaga większego skupienia, lub podania zaawansowanych danych skorzystaj z etykiety znajdującej się po lewej stronie pola. Etykiety powinny być krótkie i rzeczowe.
+## Tech Stack
 
-### Pobranie kraju, kodu kierunkowego z adresu IP
+![VITE](https://img.shields.io/badge/-Vite-646CFF?style=flat-square&logo=vite&logoColor=ffffff)
 
-Skorzystaj z dostarczonego kodu znajdującego się w pliku `script.js` i wywołaj metodę `getCountryByIP()` oraz `getCountryCode()` tak, aby użytkownik nie tracił czasu na uzupełnienie tych pól. Oczywiście nie zapomnij o pozostawieniu możliwości zmiany - np. gdyby użytkownik wypełniał formularz będą na wakacjach w innym kraju.
+![HTML5](https://img.shields.io/badge/-HTML5-%23E44D27?style=flat-square&logo=html5&logoColor=ffffff)
 
-### Inteligentne podpowiedzi w formularzu select
+![CSS3](https://img.shields.io/badge/-CSS3-%231572B6?style=flat-square&logo=css3)
+![SASS](https://img.shields.io/badge/-Sass-CC6699?style=flat-square&logo=sass&logoColor=ffffff)
+![Bootstrap](https://img.shields.io/badge/-Bootstrap-7952B3?style=flat-square&logo=bootstrap&logoColor=FFFFFF)
 
-Do pola wyboru kraju dodaj możliwość przeszukania pola z wyświetleniem podpowiedzi pod polem formularza.
+![JavaScript](https://img.shields.io/badge/-JavaScript-%23F7DF1C?style=flat-square&logo=javascript&logoColor=000000)
+![React](https://img.shields.io/badge/-React-61DAFB?style=flat-square&logo=react&logoColor=000000)
 
-### Zmień małe selecty na wybór radio
+## Features
 
-Zmień małe selecty (do 5 - 6 elementów) na wybór radio. Możesz dodać ikony wyboru dla inputu radio, aby przyspieszyć wypełnienie formularza.
+- Updated typography more readable font
+- Bootstrap framework for quick styling.
+- Automatically fetched the user's country and country code based on IP.
+- Autocomplete with suggestion list while typing a country
+- Replaced small select dropdowns with radio
+- Grouped related fields into sections using `fieldset` and `legend`, following accessibility (a11y) best practices.
+- Organized the entire form into a single-column layout
+- Enabled full keyboard navigation (Tab, Shift+Tab, Enter).
+- Conditionally displayed optional fields (e.g., BLIK code and invoice fields)
+- Added HTML5 validation and custom regex validation for fields.
+- Improved accessibility for users relying on screen readers.
 
-### Zgrupuj powiązane pola
+## Check it out
 
-Zmień formularz tak, aby znajdował się w jednej kolumnie. Postaraj się, aby wysokość formularza nie przekraczała wysokości viewportu - czyli tak, aby formularz zmieścił się w jednej kolumnie w widocznym okienku przeglądarki. Układy z jedną kolumną są bardziej intuicyjne dla użytkowników i pomagają uniknąć przypadkowego pomijania pól.
+Copy repository
 
-### Obsługa klawiatury
+```
+git clone <LINK_TO_REPOSITORY>
+```
 
-Dodaj obsługę wysłania formularza przez klawiaturę (po naciśnięciu enter), dodaj również inne potrzebne skróty klawiaturowe.
+Go to the proper dictionary
 
-### Pozostałe techniki
+```
+cd Taskify
+```
 
-Pomyśl i spróbuj znaleźć pozostałe techniki, które uproszczą, zmniejszą czas wypełnienia i zmniejszą ilość kliknięć użytkownika. Dodaj ikony. Dodaj walidację formularza, jeśli pola ma złożone wymagania co do zawartości dodaj informację w jakim formacie należy podać dane. Zwiększ dostępność formularza dla osób z niepełnosprawnościami.
+Install dependencies
+
+```
+npm install
+```
+
+Run application
+
+```
+npm run dev
+```
+
+## Comparision
+
+### Before
+
+### After
