@@ -98,10 +98,10 @@ const FormContainer = () => {
                 <legend className='h4'>User data</legend>
                 <div className='row'>
                     <div className='col-md-6'>
-                        <InputWithLabel id="firstName" label="First name" type="text" placeholder="ex. Michael" required value={userData.firstName} onChange={handleChange} pattern="^[A-Za-z]+$" title="It needs to have at least 2 characters."  />
+                        <InputWithLabel id="firstName" label="First name" type="text" placeholder="ex. Michael" required value={userData.firstName} onChange={handleChange} pattern="^[A-Za-z]{2,}$" title="It needs to have at least 2 characters."  />
                     </div>
                     <div className='col-md-6'>
-                        <InputWithLabel id="lastName" label="Last name" type="text" required={false} placeholder="ex. Plain" value={userData.lastName} onChange={handleChange} />
+                        <InputWithLabel id="lastName" label="Last name" type="text" required placeholder="ex. Plain" value={userData.lastName} onChange={handleChange} pattern="^[A-Za-z]{2,}$" title="It needs to have at least 2 characters." />
                     </div>
                 </div>
                 <InputWithLabel id="email" label="Email" type="email" required={false} placeholder="ex. michael.plain@gmail.com" value={userData.email} onChange={handleChange} />
