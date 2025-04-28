@@ -59,5 +59,27 @@ npm run dev
 ## Comparision
 
 ### Before
+![Zrzut ekranu 2025-04-23 o 21 59 47](https://github.com/user-attachments/assets/4c0232f9-4952-4526-a24f-b5c55023d5bb)
+![Zrzut ekranu 2025-04-23 o 22 00 08](https://github.com/user-attachments/assets/c06a143f-5621-4430-a53e-2b25035ee543)
+
 
 ### After
+#### Overlook
+![Zrzut ekranu 2025-04-28 o 22 53 27](https://github.com/user-attachments/assets/a2b79a45-8c6f-449c-8fd1-6b22afc818e0)
+#### Some validations
+![Zrzut ekranu 2025-04-28 o 22 53 52](https://github.com/user-attachments/assets/fbf79784-3040-49c5-8b4d-28c683752d8e)
+![Zrzut ekranu 2025-04-28 o 22 54 51](https://github.com/user-attachments/assets/833ce128-3c7d-4179-aaf7-526a6cae0cc3)
+![Zrzut ekranu 2025-04-28 o 22 55 37](https://github.com/user-attachments/assets/b7f9f786-2472-4d57-98f1-232c6d9ab726)
+#### Shipping methods
+![Zrzut ekranu 2025-04-28 o 22 55 52](https://github.com/user-attachments/assets/439cef2f-621b-4ef3-bff4-cec786a31f71)
+#### Payment methods (+ BLIK Code)
+![Zrzut ekranu 2025-04-28 o 22 56 17](https://github.com/user-attachments/assets/68d95cd3-39b6-4008-966d-e7d9842ada04)
+#### Invoice
+![Zrzut ekranu 2025-04-28 o 22 56 39](https://github.com/user-attachments/assets/1dddc91a-c7ef-4a08-8fef-bbc0ea920aba)
+#### Whole filled up form
+![Zrzut ekranu 2025-04-28 o 22 57 22](https://github.com/user-attachments/assets/d8c02a48-e062-42fa-8b47-99ad87e91cbb)
+#### User data
+![Zrzut ekranu 2025-04-28 o 22 57 53](https://github.com/user-attachments/assets/1999f296-f507-43c2-b3e7-46d81a85df5e)
+
+
+
