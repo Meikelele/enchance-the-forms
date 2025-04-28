@@ -15,7 +15,7 @@ const ShippingMethodRadioGroup = ({ value, onChange }) => {
         <div className="d-flex flex-wrap gap-3">
           {shippingOptions.map((option) => (
             <label key={option.value} className={`btn btn-outline-primary d-flex align-items-center gap-2 ${ value === option.value ? "active" : ""}`} >
-              <input type="radio" name="shipping" value={option.value} checked={value === option.value} onChange={(e) => onChange(e.target.value)} className="d-none" />
+              <input type="radio" name="shipping" value={option.value} checked={value === option.value} onChange={(e) => onChange(e.target.value)} className="d-none" required={!value} />
               <i className={`bi ${option.icon}`}></i>
               {option.label}
             </label>

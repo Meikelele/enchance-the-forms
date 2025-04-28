@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 
-const PhoneInputWithCountryCode = ({ value, onChange }) => {
+const PhoneInputWithCountryCode = ({ value, onChange, required = false, pattern, title }) => {
 
     const [number, setNumber] = useState("")
     const [countryCode, setCountryCode] = useState("")
@@ -43,7 +43,7 @@ const PhoneInputWithCountryCode = ({ value, onChange }) => {
             <label className="form-label" style={{marginBottom: '0rem'}}>Phone</label>
             <div className="input-group d-flex gap-2">
                 <input className="form-control" style={{ flex: '1' }} value={countryCode} onChange={handleCodeChange} placeholder={countryCode}/>
-                <input className="form-control" style={{ flex: '10' }} value={number} onChange={handleNumberChange} type="tel" placeholder="ex. 123 456 789"/>
+                <input className="form-control" style={{ flex: '10' }} value={number} onChange={handleNumberChange} required={required} type="tel" placeholder="ex. 123456789" pattern={pattern} title={title}/>
             </div>
         </div>
     )
