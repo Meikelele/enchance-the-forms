@@ -35,13 +35,13 @@
 Copy repository
 
 ```
-git clone <LINK_TO_REPOSITORY>
+git clone https://github.com/Meikelele/enchance-the-forms
 ```
 
 Go to the proper dictionary
 
 ```
-cd Taskify
+cd enchance-the-forms
 ```
 
 Install dependencies
